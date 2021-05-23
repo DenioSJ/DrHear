@@ -443,19 +443,29 @@
       ];
       var answers = [];
       function changeQuestion(currentIndex, choice){
-        if(currentIndex < (questions.length)-1)
-        {  
+        if(currentIndex < (questions.length)-1){  
           document.getElementById('question').innerText = questions[currentIndex + 1];
-          answers.push(choice);
+          if(answers[currentIndex] == undefined){
+            answers.push(choice);
+          }
+          else{
+            answers[currentIndex] = choice;
+          }
           document.getElementById('questionNum').innerText = `Question ${currentIndex + 2}/${questions.length}`;
           var buttons = document.getElementsByClassName('choice');
           for(var i=0; i<buttons.length;i++){
             buttons[i].setAttribute('onclick',`changeQuestion(${currentIndex+1},${4-i})`);
           }
         }else{
-          console.log(answers);
+          document.getElementById('questionNum').innerHTML='';
+          document.getElementById('question').innerText='';
+          document.getElementById('exampleModalLabel').innerHTML='You have completed the Questionaire';
+          document.getElementById('buttons').innerHTML = `<button onclick="submit()" type="button" class="choice btn btn-outline-success mr-1">Submit</button>`;
         }
-      } 
+      }
+      function submit(){
+        console.log(answers);
+      }
 
     </script>
 

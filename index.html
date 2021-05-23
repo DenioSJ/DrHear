@@ -414,10 +414,10 @@
                   <h5 id="questionNum" class="card-title mx-auto" >Question 1/10</h5>
                   <p id="question" class="card-text">Are there situations in which you find it difficult to hear clearly?</p>
 				  <div id="buttons">
-					  <button onclick="changeQuestion(1,4)" type="button" class="choice btn btn-danger mr-2 ">Almost Always</button>
+					  <!-- <button onclick="changeQuestion(1,4)" type="button" class="choice btn btn-danger mr-2 ">Almost Always</button>
 					  <button onclick="changeQuestion(1,3)" type="button" class="choice btn btn-warning mr-2">Half the Time</button>
 					  <button onclick="changeQuestion(1,2)" type="button" class="choice btn btn-secondary mr-2">Occasionally</button>
-					  <button onclick="changeQuestion(1,1)" type="button" class="choice btn btn-success mr-2">Never</button>
+					  <button onclick="changeQuestion(1,1)" type="button" class="choice btn btn-success mr-2">Never</button> -->
 				  </div>
                 </div>
           </div>
@@ -445,38 +445,66 @@
       var answers = [];
       var backButtonContainer = document.getElementById('backContainer');
       function changeQuestion(currentIndex, choice){
-        if(currentIndex < (questions.length)){  
-          document.getElementById('question').innerText = questions[currentIndex];
-          if(currentIndex > 0)
-            backButtonContainer.innerHTML = `<button type="button" onclick="fetchPreviousQn(${currentIndex})" class="btn text-nowrap">Back</button>`;
-          else
-            backButtonContainer.innerHTML = '';
-          if (choice == undefined)
-            answers.pop();
-          else if(answers[currentIndex-1] == undefined){
-            answers.push(choice);
-          }
-          else{
-            answers[currentIndex-1] = choice;
-          }
-          document.getElementById('questionNum').innerText = `Question ${currentIndex + 1}/${questions.length}`;
-          var buttons = document.getElementsByClassName('choice');
-          for(var i=0; i<buttons.length;i++){
-            buttons[i].setAttribute('onclick',`changeQuestion(${currentIndex+1},${4-i})`);
-          }
-        }else{
-          document.getElementById('questionNum').innerHTML='';
-          document.getElementById('question').innerText='';
-          document.getElementById('exampleModalLabel').innerHTML='You have completed the Questionaire';
-          document.getElementById('buttons').innerHTML = `<button onclick="submit()" type="button" class="choice btn btn-outline-success mr-1">Submit</button>`;
+        if (choice == undefined)
+          answers.pop();
+        else if(answers[currentIndex-1] == undefined){
+          answers.push(choice);
         }
+        else{
+          answers[currentIndex-1] = choice;
+        }
+        if(currentIndex < (questions.length)){
+          if(currentIndex > 0){
+            backButtonContainer.innerHTML = `<button type="button" onclick="fetchPreviousQn(${currentIndex-1})" class="btn text-nowrap">Back</button>`;
+          }else{
+            backButtonContainer.innerHTML = '';
+          }
+          generateQuestion(currentIndex);
+          createButtons(currentIndex);
+        }else{
+          document.getElementById('exampleModalLabel').innerHTML='You have completed the Questionaire';
+          document.getElementById('questionNum').innerHTML = '';
+          document.getElementById('question').innerHTML = '';
+          backButtonContainer.innerHTML = `<button type="button" onclick="fetchPreviousQn(${currentIndex-1})" class="btn text-nowrap">Back</button>`;
+          createButtons(currentIndex);
+        }
+      }
+      function createButtons(index){
+        var buttons = document.getElementById('buttons');
+        buttons.innerHTML = '';
+        if(index >= 10){
+          var newButton = document.createElement('button');
+          newButton.setAttribute('onclick', 'submit()');
+          newButton.setAttribute('type', 'button');
+          newButton.setAttribute('class', 'btn btn-outline-success mr-1');
+          newButton.textContent = 'Submit';
+          buttons.appendChild(newButton);
+        }else{
+          var buttonArray = ['Almost Always', 'Half the Time', 'Occasionally', 'Never'];
+          var buttonCategory = ['btn-danger', 'btn-warning', 'btn-secondary', 'btn-success'];
+          for(var i=0;i<4;i++){
+					  // <button onclick="changeQuestion(1,1)" type="button" class="choice btn btn-success mr-2">Never</button>
+            var newButton = document.createElement('button');
+            newButton.setAttribute('onclick',`changeQuestion(${index+1},${4-i})`);
+            newButton.setAttribute('type','button');
+            newButton.setAttribute('class',`choice btn ${buttonCategory[i]} mr-2`);
+            newButton.textContent = buttonArray[i];
+            buttons.append(newButton);
+          }
+        }
+      }
+      function generateQuestion(index){
+        document.getElementById('question').innerText = questions[index];
+        document.getElementById('questionNum').innerText = `Question ${index + 1}/${questions.length}`;
       }
       function submit(){
         console.log(answers);
       }
       function fetchPreviousQn(index){
-        changeQuestion(index-1);
+        changeQuestion(index);
       }
+      generateQuestion(0);
+      createButtons(0);
 
     </script>
 

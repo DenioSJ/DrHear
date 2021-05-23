@@ -184,7 +184,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo img {
-  max-height: 60px;
+  height: 50px;
+  width: 100px;
 }
 
 /**
@@ -442,9 +443,13 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 90vh;
-  background: url("../img/hero-bg.jpg") right;
+  background: url("../img/hero-bg.jpg") no-repeat center center fixed ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  margin-bottom: -100px;
+  background-repeat: no-repeat;
+  margin-bottom: -200px;
 }
 
 #hero .container {
@@ -457,11 +462,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 56px;
   text-transform: uppercase;
-  color: #2c4964;
+  color: #f4f6f7;
 }
 
 #hero h2 {
-  color: #2c4964;
+  color: #ffffff;
   margin: 10px 0 0 0;
   font-size: 24px;
 }
@@ -480,6 +485,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   background: #1977cc;
 }
+
 
 #hero .btn-get-started:hover {
   background: #3291e6;
@@ -695,6 +701,9 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about {
+  background-color: #F1F7FD;
+}
 .about .icon-boxes h4 {
   font-size: 18px;
   color: #4b7dab;
@@ -859,52 +868,6 @@ section {
     transform: scale(1, 1);
     opacity: 0;
   }
-}
-
-/*--------------------------------------------------------------
-# Counts
---------------------------------------------------------------*/
-.counts {
-  background: #f1f7fd;
-  padding: 70px 0 60px;
-}
-
-.counts .count-box {
-  padding: 30px 30px 25px 30px;
-  width: 100%;
-  position: relative;
-  text-align: center;
-  background: #fff;
-}
-
-.counts .count-box i {
-  position: absolute;
-  top: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 20px;
-  background: #1977cc;
-  color: #fff;
-  border-radius: 50px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-}
-
-.counts .count-box span {
-  font-size: 36px;
-  display: block;
-  font-weight: 600;
-  color: #082744;
-}
-
-.counts .count-box p {
-  padding: 0;
-  margin: 0;
-  font-family: "Raleway", sans-serif;
-  font-size: 14px;
 }
 
 /*--------------------------------------------------------------
@@ -1079,70 +1042,9 @@ section {
   background: #1c84e3;
 }
 
-/*--------------------------------------------------------------
-# Departments
---------------------------------------------------------------*/
-.departments {
-  overflow: hidden;
-}
-
-.departments .nav-tabs {
-  border: 0;
-}
-
-.departments .nav-link {
-  border: 0;
-  padding: 12px 15px 12px 0;
-  transition: 0.3s;
-  color: #2c4964;
-  border-radius: 0;
-  border-right: 2px solid #ebf1f6;
-  font-weight: 600;
-  font-size: 15px;
-}
-
-.departments .nav-link:hover {
-  color: #1977cc;
-}
-
-.departments .nav-link.active {
-  color: #1977cc;
-  border-color: #1977cc;
-}
-
-.departments .tab-pane.active {
-  -webkit-animation: fadeIn 0.5s ease-out;
-  animation: fadeIn 0.5s ease-out;
-}
-
-.departments .details h3 {
-  font-size: 26px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #2c4964;
-}
-
-.departments .details p {
-  color: #777777;
-}
-
-.departments .details p:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width: 992px) {
-  .departments .nav-link {
-    border: 0;
-    padding: 15px;
-  }
-  .departments .nav-link.active {
-    color: #fff;
-    background: #1977cc;
-  }
-}
 
 /*--------------------------------------------------------------
-# Doctors
+# Hearing Aid
 --------------------------------------------------------------*/
 .doctors {
   background: #fff;
@@ -1236,6 +1138,24 @@ section {
   margin-left: 8px;
 }
 
+/*--------------------------------------------------------------
+# Hearing Test
+--------------------------------------------------------------*/
+
+.btn-hearing-aid {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 35px;
+  margin-top: 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fff;
+  background: #1977cc;
+} 
 /*--------------------------------------------------------------
 # Frequently Asked Questions
 --------------------------------------------------------------*/

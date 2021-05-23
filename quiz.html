@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Dr Hear Hearing Test</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+  </head>
+  <body>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Launch demo modal </button>
+  
+  
+    <!-- Modal -->
+    <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Please answer the questions below to the best of your ability.</h5>
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button> -->
+            <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+            <button type="button" class="btn-close" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="card-body">
+                  <h5 id="questionNum" class="card-title mx-auto" >Question 1/10</h5>
+                  <p id="question" class="card-text">Are there situations in which you find it difficult to hear clearly?</p>
+                  <button onclick="changeQuestion(0,4)" type="button" class="choice btn btn-danger mr-2 ">Almost Always</button>
+                  <button onclick="changeQuestion(0,3)" type="button" class="choice btn btn-warning mr-2">Half the Time</button>
+                  <button onclick="changeQuestion(0,2)" type="button" class="choice btn btn-secondary mr-2">Occasionally</button>
+                  <button onclick="changeQuestion(0,1)" type="button" class="choice btn btn-success mr-2">Never</button>
+                </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script>
+        var questions = [
+          'Are there situations in which you find it difficult to hear clearly?',
+          'Do you have to strain to understand conversations?',
+          'Do you have a problem hearing over the telephone?',
+          'Do you have trouble following a conversation when two or more people are talking at the same time?',
+          'Do you have trouble hearing conversations in a noisy background such as a restaurant or a group gathering?',
+          'Do you have dizziness, pain, or ringing in your ears?',
+          'Do family members or coworkers remark about you missing what has been said?',
+          'Do people complain that you turn the TV volume up too high?',
+          'Do you find it hard to hear someone when they talk in a soft voice or whisper?',
+          'Do you find understanding women and children particularly challenging?'
+        ];
+        var answers = [];
+        function changeQuestion(currentIndex, choice){
+          if(currentIndex < (questions.length)-1)
+          {  
+            document.getElementById('question').innerText = questions[currentIndex + 1];
+            answers.push(choice);
+            document.getElementById('questionNum').innerText = `Question ${currentIndex + 2}/${questions.length}`;
+            var buttons = document.getElementsByClassName('choice');
+            for(var i=0; i<buttons.length;i++){
+              buttons[i].setAttribute('onclick',`changeQuestion(${currentIndex+1},${4-i})`);
+            }
+          }else{
+            console.log(answers);
+          }
+        } 
+  
+      </script>
+    
+  </body>
+</html>

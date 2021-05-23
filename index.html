@@ -446,7 +446,7 @@
       var backButtonContainer = document.getElementById('backContainer');
       function changeQuestion(currentIndex, choice){
         if(currentIndex < (questions.length)){  
-          document.getElementById('question').innerText = questions[currentIndex + 1];
+          document.getElementById('question').innerText = questions[currentIndex];
           if(currentIndex > 0)
             backButtonContainer.innerHTML = `<button type="button" onclick="fetchPreviousQn(${currentIndex})" class="btn text-nowrap">Back</button>`;
           else

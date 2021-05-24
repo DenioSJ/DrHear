@@ -562,6 +562,7 @@
         }
       }
       function generateQuestion(index){
+      	document.getElementById('exampleModalLabel').innerHTML='Please answer the questions below to the best of your ability.';
         document.getElementById('question').innerText = questions[index];
         document.getElementById('questionNum').innerText = `Question ${index + 1}/${questions.length}`;
       }

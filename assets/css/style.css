@@ -18,6 +18,64 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+/* Whatsapp Button */
+.float{
+	position:fixed;
+	width:50px;
+	height:50px;
+	bottom:70px;
+	right:10px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:20px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+
+/* Call Button */
+.float1{
+	position:fixed;
+	width:50px;
+	height:50px;
+	bottom:130px;
+	right:10px;
+	background-color:#1977cc;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:20px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+
+
+/* Hearing Test */
+
+.float2{
+	position:fixed;
+	width:50px;
+	height:50px;
+	bottom:190px;
+	right:10px;
+	background-color:#1977cc;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:20px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+
+
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -874,7 +932,7 @@ section {
 # Services
 --------------------------------------------------------------*/
 
-.values .box {
+.services .box {
   padding: 30px;
   box-shadow: 0px 0 5px rgba(1, 41, 112, 0.08);
   text-align: center;
@@ -882,24 +940,24 @@ section {
   height: 100%;
 }
 
-.values .box img {
+.services .box img {
   padding: 30px 50px;
   transition: 0.5s;
   transform: scale(1.1);
 }
 
-.values .box h3 {
+.services .box h3 {
   font-size: 24px;
   color: #012970;
   font-weight: 700;
   margin-bottom: 18px;
 }
 
-.values .box:hover {
+.services .box:hover {
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
 }
 
-.values .box:hover img {
+.services .box:hover img {
   transform: scale(1);
 }
 

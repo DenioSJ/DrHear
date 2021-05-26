@@ -1345,7 +1345,7 @@ section {
 .team .member .member-img {
   position: relative;
   overflow: hidden;
-  height: 50%;
+  height: 40%;
 }
 
 .team .member .member-img:after {

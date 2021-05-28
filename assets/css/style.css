@@ -593,9 +593,9 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 90vh;
   background-size: cover;
-  background-position: bottom;
+  /* background-position: center;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center center; */
 }
 
 #hero .carousel-item::before {
@@ -646,6 +646,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero .carousel-inner .carousel-item {
   transition-property: opacity;
   background-position: center top;
+  
 }
 
 #hero .carousel-inner .carousel-item,
@@ -672,14 +673,17 @@ h1, h2, h3, h4, h5, h6 {
 #hero .carousel-control-prev, #hero .carousel-control-next {
   width: 10%;
 }
-
+#hero .carousel-inner > .item > img {
+  margin: 0 auto;
+}
+if you want to have the image full size inside of the carousel add width .carousel-inner > .item > img{ margin:auto; width:100% }
 #hero .carousel-control-next-icon, #hero .carousel-control-prev-icon {
   background: none;
-  font-size: 48px;
+  font-size: 15px;
   line-height: 1;
   width: auto;
   height: auto;
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 
 #hero .carousel-indicators li {

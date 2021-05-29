@@ -500,14 +500,8 @@ h1, h2, h3, h4, h5, h6 {
 # Hero Section
 --------------------------------------------------------------*/
 
-/* #hero {
-  width: 100%;
-  height: 90vh;
-  background: url("../img/hero-bg.jpg") top center;
-  background-size: cover;
-  margin-bottom: -200px;
-}
 
+/*
 #hero .container {
   position: relative;
 }
@@ -581,21 +575,224 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 90vh;
+  overflow: hidden;
+  position: relative;
+}
+
+#hero .carousel, #hero .carousel-inner, #hero .carousel-item, #hero .carousel-item::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#hero .carousel-item {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+
+
+#hero .container {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1200px) {
+  #hero .container {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+#hero h2 {
+  color: rgb(255, 255, 255);
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+
+#hero h2 span {
+  color: #1977cc;
+}
+  /* #hero h4{
+    margin: 0 auto 50px auto;
+    color: #555555;
+    
+  } */
+
+#hero h3 {
+  width: 80%;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+  margin: 0 auto 30px auto;
+  /* color: arken( rgb(255, 255, 255),15); */
+  color:  rgb(255, 255, 255);
+}
+
+#hero .carousel-inner .carousel-item {
+  transition-property: opacity;
+  background-position: center top;
+}
+
+#hero .carousel-inner .carousel-item,
+#hero .carousel-inner .active.carousel-item-start,
+#hero .carousel-inner .active.carousel-item-end {
+  opacity: 0;
+}
+
+#hero .carousel-inner .active,
+#hero .carousel-inner .carousel-item-next.carousel-item-start,
+#hero .carousel-inner .carousel-item-prev.carousel-item-end {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+#hero .carousel-inner .carousel-item-next,
+#hero .carousel-inner .carousel-item-prev,
+#hero .carousel-inner .active.carousel-item-start,
+#hero .carousel-inner .active.carousel-item-end {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+#hero .carousel-control-next-icon, #hero .carousel-control-prev-icon {
+  background: none;
+  font-size: 30px;
+  line-height: 0;
+  width: auto;
+  height: auto;
+  /* background: rgba(63, 187, 192, 0.8); */
+  border-radius: 50px;
+  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.5);
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* #hero .carousel-control-next-icon:hover, #hero .carousel-control-prev-icon:hover {
+  background: #1977cc;
+  color: rgba(255, 255, 255, 0.8);
+} */
+
+#hero .carousel-indicators li {
+  cursor: pointer;
+  background: #fff;
+  overflow: hidden;
+  border: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+  opacity: .6;
+  transition: 0.3s;
+}
+
+#hero .carousel-indicators li.active {
+  opacity: 1;
+  background: #1977cc;
+}
+
+#hero .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 35px;
+  margin-top: 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fff;
+  background: #1977cc;
+}
+
+#hero .btn-get-started:hover {
+  background: #3291e6;
+}
+/* #hero .btn-get-started:hover {
+  background: transparent;
+  color: #1977cc;
+  text-decoration: none;
+}
+
+#hero .btn-get-started {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 4px;
+  transition: 0.5s;
+  line-height: 1;
+  color: #fff;
+  background: #1977cc;
+}
+
+#hero .btn-get-started:hover {
+  background: #65c9cd;
+} */
+
+@media (max-width: 992px) {
+  #hero {
+    height: 100vh;
+  }
+  #hero .container {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #hero .carousel-control-prev, #hero .carousel-control-next {
+    width: 5%;
+  }
+}
+
+@media (max-height: 500px) {
+  #hero {
+    height: 160vh;
+  }
+}
+
+
+
+/* #hero {
+  width: 100%;
+  height: 90vh;
   background-color: rgba(59, 59, 59, 0.8);
   overflow: hidden;
   padding: 15 0 0;
   margin-bottom: -120px;
   position: relative;
   z-index: 1;
+  
 }
 
 #hero .carousel-item {
   width: 100%;
   height: 90vh;
   background-size: cover;
-  /* background-position: center;
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: center center; */
+  background-position: center center;
 }
 
 #hero .carousel-item::before {
@@ -646,6 +843,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero .carousel-inner .carousel-item {
   transition-property: opacity;
   background-position: center top;
+  margin: auto;
   
 }
 
@@ -673,10 +871,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero .carousel-control-prev, #hero .carousel-control-next {
   width: 10%;
 }
-#hero .carousel-inner > .item > img {
-  margin: 0 auto;
-}
-if you want to have the image full size inside of the carousel add width .carousel-inner > .item > img{ margin:auto; width:100% }
+
 #hero .carousel-control-next-icon, #hero .carousel-control-prev-icon {
   background: none;
   font-size: 15px;
@@ -704,6 +899,8 @@ if you want to have the image full size inside of the carousel add width .carous
 
 #hero .btn-get-started {
   font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
@@ -712,11 +909,25 @@ if you want to have the image full size inside of the carousel add width .carous
   border-radius: 50px;
   transition: 0.5s;
   line-height: 1;
-  margin: 10px;
+  margin-top: 10px;
   color: #fff;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
   border: 2px solid #1977cc;
+  background: #1977cc;
+}
+#hero .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 35px;
+  margin-top: 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fff;
   background: #1977cc;
 }
 
@@ -728,7 +939,12 @@ if you want to have the image full size inside of the carousel add width .carous
 
 @media (max-height: 768px), (max-width: 1200px) {
   #hero {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
   #hero .carousel-container {
     padding-bottom: 0;
@@ -755,13 +971,13 @@ if you want to have the image full size inside of the carousel add width .carous
     width: 5%;
   }
 }
-
+ */
 
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 30px 0;
   overflow: hidden;
 }
 

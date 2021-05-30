@@ -301,20 +301,19 @@
               <div class="validate"></div>
             </div>
             <div class="col-md-4 form-group mt-3">
-              <select name="department" id="department" class="form-select">
-                <option value="">Select Department</option>
-                <option value="Department 1">Department 1</option>
-                <option value="Department 2">Department 2</option>
-                <option value="Department 3">Department 3</option>
+              <select name="service" id="service" class="form-select">
+                <option value="">Select Service</option>
+                <option value="Hearing aid test">Hearing aid test</option>
+                <option value="Hearing aid trial">Hearing aid trial</option>
+                <option value="Speech therapy">Speech therapy</option>
               </select>
               <div class="validate"></div>
             </div>
             <div class="col-md-4 form-group mt-3">
-              <select name="doctor" id="doctor" class="form-select">
+              <select name="location" id="locationofvisit" class="form-select">
                 <option value="">Select Doctor</option>
-                <option value="Doctor 1">Doctor 1</option>
-                <option value="Doctor 2">Doctor 2</option>
-                <option value="Doctor 3">Doctor 3</option>
+                <option value="Clinic">Clinic</option>
+                <option value="Home">Home</option>
               </select>
               <div class="validate"></div>
             </div>
@@ -417,11 +416,7 @@
               </div>
             </div>
           </div>
-
-          
-
         </div>
-
       </div>
     </section><!-- End doctors Section -->
 
@@ -454,7 +449,7 @@
               <div class="card-body">
                   <h5 id="questionNum" class="card-title mx-auto" >Question 1/10</h5>
                   <p id="question" class="card-text">Are there situations in which you find it difficult to hear clearly?</p>
-				  <div id="buttons">
+				  <div id="buttons" class="d-flex justify-content-center bd-highlight mb-3">
 					  <!-- <button onclick="changeQuestion(1,4)" type="button" class="choice btn btn-danger mr-2 ">Almost Always</button>
 					  <button onclick="changeQuestion(1,3)" type="button" class="choice btn btn-warning mr-2">Half the Time</button>
 					  <button onclick="changeQuestion(1,2)" type="button" class="choice btn btn-secondary mr-2">Occasionally</button>
@@ -517,7 +512,7 @@
           var newButton = document.createElement('button');
           newButton.setAttribute('onclick', 'submit()');
           newButton.setAttribute('type', 'button');
-          newButton.setAttribute('class', 'btn btn-outline-success mr-1');
+          newButton.setAttribute('class', 'btn btn-outline-success p-2 bd-highlight');
           newButton.textContent = 'Submit';
           buttons.appendChild(newButton);
         }else{
@@ -539,8 +534,32 @@
         document.getElementById('question').innerText = questions[index];
         document.getElementById('questionNum').innerText = `Question ${index + 1}/${questions.length}`;
       }
-      function submit(){
-        console.log(answers);
+      function submit(){    
+        var buttons = document.getElementById('buttons');  
+        var sum = answers.reduce((a, b) => a + b, 0);
+        var average = sum / answers.length; 
+        var messageHead = ""; 
+        var messageBody = "";
+        if(average <= 2){ 
+          messageHead = "No Hearing loss";
+          messageBody = "Your answer suggest that you do not have a hearing loss.  According to the ansers you have given , you should perform well in everyday situations. To ensure you maintain healthy hearing, we recommend you get your hearing checked once a year."
+        }
+        else if(average <= 3) { 
+          messageHead = "Chance of Hearing loss";
+          messageBody = "Your answer suggest that you do not have a hearing loss.  According to the ansers you have given , you should perform well in everyday situations. To ensure you maintain healthy hearing, we recommend you get your hearing checked once a year."
+        }
+        else { 
+          messageHead = "Severe Hearing loss!";
+          messageBody = "Your answer suggest that you do not have a hearing loss.  According to the ansers you have given , you should perform well in everyday situations. To ensure you maintain healthy hearing, we recommend you get your hearing checked once a year."
+        }
+        answers = [];
+        buttons.innerHTML = "";
+        document.getElementById('exampleModalLabel').innerHTML='Your test result';
+        // buttons.innerHTML = `${messageHead}\n${messageBody}`;
+        document.getElementById("questionNum").innerText = messageHead;
+        document.getElementById("question").innerText = messageBody;
+        document.getElementById("backContainer").innerHTML = "";
+        console.log(average);
       }
       function fetchPreviousQn(index){
         changeQuestion(index);

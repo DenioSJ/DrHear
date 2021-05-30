@@ -297,7 +297,7 @@
           </div>
           <div class="row">
             <div class="col-md-4 form-group mt-3">
-              <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <input type="date" id="apptmtdate" >
               <div class="validate"></div>
             </div>
             <div class="col-md-4 form-group mt-3">
@@ -314,6 +314,17 @@
                 <option value="">Select Doctor</option>
                 <option value="Clinic">Clinic</option>
                 <option value="Home">Home</option>
+              </select>
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="location" id="hearingaid" class="form-select">
+                <option value="">Select Doctor</option>
+                <option value="Signia">Signia</option>
+                <option value="Resound">Resound</option>
+                <option value="Phonek">Phonek</option>
+                <option value="Starkey">Starkey</option>
+                <option value="Oticon">Oticon</option>
               </select>
               <div class="validate"></div>
             </div>
@@ -464,7 +475,6 @@
         </div>
       </div>
     </div>
-
     <script>
       var questions = [
         'Are there situations in which you find it difficult to hear clearly?',
@@ -566,6 +576,10 @@
       }
       generateQuestion(0);
       createButtons(0);
+      
+      var today = new Date();
+      var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+      document.getElementById("apptmtdate").value = `${date}`;
 
     </script>
 

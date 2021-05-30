@@ -198,7 +198,7 @@
 
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
             <h3>About Us</h3>
-            <p>Our team of professionals at Dr Hear understand the needs of our clients and provides solutions that which are tailor-made to the needs of modern and active lifestyles which are comfortable, effective, and affordable.We are the Premium Partners of Hearing Aids Manufacturers like Signia, Phonak, Resound, Widex, and many more.</p>
+            <p>Our team of professionals at Dr Hear understand the needs of our clients and provides solutions that which are tailor-made to the needs of modern and active lifestyles which are comfortable, effective, and affordable.We are the Premium Partners of Hearing Aids Manufacturers like Signia, Phonak, Resound, Starkey, and many more.</p>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-fingerprint"></i></div>
@@ -233,7 +233,7 @@
 
         <header class="section-title">
           <h2>Services</h2>
-          <p>Odit est perspiciatis laborum et dicta</p>
+          <p>These are the services that we provide.</p>
         </header>
 
         <div class="row">
@@ -277,7 +277,6 @@
 
         <div class="section-title">
           <h2>Make an Appointment</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
         <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
@@ -311,7 +310,7 @@
             </div>
             <div class="col-md-4 form-group mt-3">
               <select name="location" id="locationofvisit" class="form-select">
-                <option value="">Select Doctor</option>
+                <option value="">Select Location</option>
                 <option value="Clinic">Clinic</option>
                 <option value="Home">Home</option>
               </select>
@@ -340,7 +339,7 @@
 
         <div class="section-title">
           <h2>Hearing Aids</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>These are the types of Hearing Aids that are available. Get in touch with us for getting the one that suits you.</p>
         </div>
 
         <div class="row">
@@ -439,10 +438,6 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Please answer the questions below to the best of your ability.</h5>
-            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button> -->
-            <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -450,10 +445,7 @@
                   <h5 id="questionNum" class="card-title mx-auto" >Question 1/10</h5>
                   <p id="question" class="card-text">Are there situations in which you find it difficult to hear clearly?</p>
 				  <div id="buttons" class="d-flex justify-content-center bd-highlight mb-3">
-					  <!-- <button onclick="changeQuestion(1,4)" type="button" class="choice btn btn-danger mr-2 ">Almost Always</button>
-					  <button onclick="changeQuestion(1,3)" type="button" class="choice btn btn-warning mr-2">Half the Time</button>
-					  <button onclick="changeQuestion(1,2)" type="button" class="choice btn btn-secondary mr-2">Occasionally</button>
-					  <button onclick="changeQuestion(1,1)" type="button" class="choice btn btn-success mr-2">Never</button> -->
+					  
 				  </div>
                 </div>
           </div>
@@ -498,7 +490,7 @@
           generateQuestion(currentIndex);
           createButtons(currentIndex);
         }else{
-          document.getElementById('exampleModalLabel').innerHTML='You have completed the Questionaire';
+          document.getElementById('exampleModalLabel').innerHTML='You have completed the Hearing Test';
           document.getElementById('questionNum').innerHTML = '';
           document.getElementById('question').innerHTML = '';
           backButtonContainer.innerHTML = `<button type="button" onclick="fetchPreviousQn(${currentIndex-1})" class="btn text-nowrap">Back</button>`;
@@ -519,7 +511,6 @@
           var buttonArray = ['Almost Always', 'Half the Time', 'Occasionally', 'Never'];
           var buttonCategory = ['btn-danger', 'btn-warning', 'btn-secondary', 'btn-success'];
           for(var i=0;i<4;i++){
-					  // <button onclick="changeQuestion(1,1)" type="button" class="choice btn btn-success mr-2">Never</button>
             var newButton = document.createElement('button');
             newButton.setAttribute('onclick',`changeQuestion(${index+1},${4-i})`);
             newButton.setAttribute('type','button');
@@ -541,21 +532,20 @@
         var messageHead = ""; 
         var messageBody = "";
         if(average <= 2){ 
-          messageHead = "No Hearing loss";
-          messageBody = "Your answer suggest that you do not have a hearing loss.  According to the ansers you have given , you should perform well in everyday situations. To ensure you maintain healthy hearing, we recommend you get your hearing checked once a year."
+          messageHead = "No Hearing Loss";
+          messageBody = "Your score suggests that you do not have any kind of hearing loss. According to the answers you have given, you should perform well in everyday situations. To ensure you maintain healthy hearing, we recommend you get your hearing checked once a year."
         }
         else if(average <= 3) { 
-          messageHead = "Chance of Hearing loss";
+          messageHead = "Chance of Hearing Loss";
           messageBody = "Your answer suggest that you do not have a hearing loss.  According to the ansers you have given , you should perform well in everyday situations. To ensure you maintain healthy hearing, we recommend you get your hearing checked once a year."
         }
         else { 
-          messageHead = "Severe Hearing loss!";
+          messageHead = "Severe Hearing Loss!";
           messageBody = "Your answer suggest that you do not have a hearing loss.  According to the ansers you have given , you should perform well in everyday situations. To ensure you maintain healthy hearing, we recommend you get your hearing checked once a year."
         }
         answers = [];
         buttons.innerHTML = "";
         document.getElementById('exampleModalLabel').innerHTML='Your test result';
-        // buttons.innerHTML = `${messageHead}\n${messageBody}`;
         document.getElementById("questionNum").innerText = messageHead;
         document.getElementById("question").innerText = messageBody;
         document.getElementById("backContainer").innerHTML = "";
@@ -716,11 +706,10 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                  <h3>Saul Goodman</h3>
-                  <h4>Ceo &amp; Founder</h4>
+                  <h3>Amira Khan</h3>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                    Good ambience with polite and experienced staffs. One of the best place for speech and hearing evaluation and for the purchase of world class hearing aids.
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
@@ -731,12 +720,10 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                  <h3>Sara Wilsson</h3>
-                  <h4>Designer</h4>
+                  <h3>Eshana Gupta</h3>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    Good services by Dr Hear team. The staffs are always approachable. Affordable price for hearing aids and excellent services even at the comfort of our homes.                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
               </div>
@@ -746,12 +733,10 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
+                  <h3>Aiden Roy</h3>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    Dr Hear staffs took the time to evaluate and explain the problems that I had in each ear. They also went into detail on how they would balance each ear so that would make each ear have a normal balance and volume. They created three different settings for three different environments. They also gave a trial period of 14 days, to [try them out], which really impressed me. That made the sale.                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
               </div>
@@ -761,11 +746,11 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                  <h3>Matt Brandon</h3>
-                  <h4>Freelancer</h4>
+                  <h3>Mohammed Irfan</h3>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                    I took my father here. The Audiologists were very polite and understood the problem of my 60 years old father patiently. They gave me a wide range of user friendly hearing aids with the best features. I also availed decent discounts. I will definitely recommend it to every one.
+                    Your entire staff is very responsive, timely and helpful. Thanks!                    
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
@@ -776,11 +761,10 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
+                  <h3>Sheethal Shah</h3>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                    Dr Hear staffs took the time to evaluate and explain the problems that I had in each ear. They also went into detail on how they would balance each ear so that would make each ear have a normal balance and volume. They created three different settings for three different environments. They also gave a trial period of 14 days, to [try them out], which really impressed me. That made me the deal.                    
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>

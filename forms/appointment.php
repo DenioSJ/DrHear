@@ -29,7 +29,7 @@
   $contact->add_message( $_POST['name'], 'Name');
   $contact->add_message( $_POST['email'], 'Email');
   $contact->add_message( $_POST['phone'], 'Phone');
-  $contact->add_message( $_POST['locationofvisit'], 'Location of Visit');
+  $contact->add_message( $_POST['location'], 'Location of Visit');
   $contact->add_message( $_POST['hearingaid'], 'Hearing Aid Preference');
   $contact->add_message( $_POST['message'], 'Message');
 

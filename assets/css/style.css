@@ -549,6 +549,9 @@ h1, h2, h3, h5, h6 {
   font-weight: 700;
 }
 
+#first{
+  color: white !important;
+}
 
 #hero h1 span {
   color: #1977cc;

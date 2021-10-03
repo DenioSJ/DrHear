@@ -10,7 +10,7 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-
+<link rel="canonical" href="https://drhearclinic.com" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -37,6 +37,39 @@
   
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  
+  <!-- Global site tag (gtag.js) - Google Ads: 365072698 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-365072698"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-365072698');
+</script>
+
+<script>
+  window.addEventListener('load',function(){
+    var x = 0;
+    var myVar = setInterval(function() {
+      if (jQuery(' div.sent-message.d-block').is(":visible")) {
+        if (x == 0) {
+         gtag('event', 'conversion', {'send_to': 'AW-365072698/1Cf_COKNy8YCELqiiq4B'});
+          x = 1;
+        }
+        clearInterval(myVar);
+      }
+
+    })
+    jQuery('body').on('click','[href*="https://api.whatsapp.com/"]',function(){
+       gtag('event', 'conversion', {'send_to': 'AW-365072698/BUvQCOOk78YCELqiiq4B'});
+    })
+    jQuery('body').on('click','[href*="tel:"]',function(){
+      gtag('event', 'conversion', {'send_to': 'AW-365072698/8NApCNTb78YCELqiiq4B'});
+    })
+  })
+</script>
+
 
   
 </head>
@@ -78,7 +111,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="DrHear - Complete Speech and Hearing Solution." class="img-fluid" width="100" height="130"></a>
+      <a href="#" class="logo me-auto"><img src="assets/img/logo.png" alt="DrHear - Complete Speech and Hearing Solution." class="img-fluid" width="100" height="130"></a>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -111,7 +144,7 @@
       <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg)">
         <div class="container">
           <h1 id="first" class="animate__animated animate__fadeInDown">Welcome to <span>Dr Hear</span></h1>
-          <h2 id="first" class="animate__animated animate__fadeInUp">We are a team of professionals who strive to make every one of your's speech and hearing experience the best possible.</h2>
+          <h3 id="first" class="animate__animated animate__fadeInUp">We are a team of professionals who strive to make every one of your's speech and hearing experience the best possible.</h3>
           <a href="#hearingtest" class="btn-get-started scrollto animate__animated animate__fadeInUp scrollto">Take our Free Online Hearing Test</a> 
         </div>
       </div>
@@ -119,8 +152,8 @@
       <!-- Slide 2 -->
       <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg)">
         <div class="container">
-          <h1 class="animate__animated fanimate__fadeInDown">Get the best hearing experience by choosing <span>Dr Hear</span></h1>
-          <h2 class="animate__animated animate__fadeInUp">Get in touch with us to find out the best hearing aid that will help you and suit your lifestyle.</h2>
+          <h2 class="animate__animated fanimate__fadeInDown">Get the best hearing experience by choosing <span>Dr Hear</span></h2>
+          <h3 class="animate__animated animate__fadeInUp">Get in touch with us to find out the best hearing aid that will help you and suit your lifestyle.</h3>
           <a href="#doctors" class="btn-get-started animate__animated animate__fadeInUp scrollto">Hearing Aids</a>  
         </div>
       </div>
@@ -128,8 +161,8 @@
       <!-- Slide 3 -->
       <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg)">
         <div class="container">
-          <h1 class="animate__animated animate__fadeInDown">Speech Therapy at <span>Dr Hear</span></h1>
-          <h2 class="animate__animated animate__fadeInUp">Speech Therapy can help you overcome all your speech related issues.</h2>
+          <h2 class="animate__animated animate__fadeInDown">Speech Therapy at <span>Dr Hear</span></h2>
+          <h3 class="animate__animated animate__fadeInUp">Speech Therapy can help you overcome all your speech related issues.</h3>
           <a href="#appointment" class="btn-get-started animate__animated animate__fadeInUp scrollto">Make an Appointment</a>
         </div>
       </div>
@@ -159,21 +192,21 @@
           <div class="col-lg-4">
             <div class="icon-box">
               <i class="bi bi-binoculars"></i>
-              <h2><a href="">Our Vision</a></h2>
+              <h3><a href="">Our Vision</a></h3>
               <p>The vision of Dr Hear is to achieve the highest standards in medical best practices in the industry. Our prime objective is to ensure satisfaction and comfort to the patients with our prompt and earnest service.</p>
             </div>
           </div>
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="icon-box">
               <i class="bi bi-bar-chart"></i>
-              <h2><a href="">Our Mission</a></h2>
+              <h3><a href="">Our Mission</a></h3>
               <p>At Dr Hear, we offer people with hearing loss the freedom to live their lives to the fullest by helping them choose individual hearing solutions for staying actively connected to life. We will deliver these services.</p>
             </div>
           </div>
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="icon-box">
               <i class="bi bi-card-checklist"></i>
-              <h2><a href="">Our Value</a></h2>
+              <h3><a href="">Our Value</a></h3>
               <p>To maximize the communication abilities of each client served by the clinic. To provide all our services with empathy and compassion. To provide hearing instrument technology personalized for each client. To provide continuous support to each  family member, community members, as well as involved physicians and paraprofessionals.</p>
             </div>
           </div>
@@ -196,24 +229,24 @@
           </div>
 
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-            <h2>About Us</h2>
+            <h3>About Us</h3>
             <p>Our team of professionals at Dr Hear understand the needs of our clients and provides solutions that which are tailor-made to the needs of modern and active lifestyles which are comfortable, effective, and affordable.We are the Premium Partners of Hearing Aids Manufacturers like Signia, Phonak, Resound, Starkey, and many more.</p>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-fingerprint"></i></div>
-              <h3 class="title">Accessibility</h3>
+              <h4 class="title">Accessibility</h4>
               <p class="description">Home service and Hearing aid clinic services are provided with the best quality to the  population across bangalore with hearing and speech needs</p>
             </div>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-gift"></i></div>
-              <h3 class="title">Acceptability</h3>
+              <h4 class="title">Acceptability</h4>
               <p class="description">We provide multiple solutions to all the Hearing Needs which will ensure to eliminate the Stigma of Hearing loss and Hearing Aids. We also provide an array of customized solutions that can be the best suit for the customer.</p>
             </div>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-atom"></i></div>
-              <h3 class="title">Assurance</h3>
+              <h4 class="title">Assurance</h4>
               <p class="description">Assuring professional Hearing Care Experts to assist all the Hearing Needs even after the sale is done. Thus extending the wings to provide a positive Hearing Care Services that enrich the client experience.</p>
             </div>
 
@@ -231,7 +264,7 @@
       <div class="container" data-aos="fade-up">
 
         <header class="section-title">
-          <h1>Services</h1>
+          <h2>Services</h2>
           <p>These are the services that we provide.</p>
         </header>
 
@@ -240,7 +273,7 @@
           <div class="col-lg-4">
             <div class="box" data-aos="fade-up" data-aos-delay="200">
               <img src="assets/img/values-1.jpeg" loading="lazy" class="img-fluid" alt="">
-              <h2>Hearing Testing</h2>
+              <h3>Hearing Testing</h3>
               <p> A hearing test provides an evaluation of the sensitivity of a person's sense of hearing though Digital Diagnostic hearing assessments like Pure tone audiometry, Tympanometry and Otoacoustic emissions (OAE).</p>
             </div>
           </div>
@@ -248,15 +281,15 @@
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="box" data-aos="fade-up" data-aos-delay="400">
               <img src="assets/img/values-2.jpeg" loading="lazy" class="img-fluid" alt="">
-              <h2>Hearing Aid Trial</h2>
-              <p>We have a wide range of Hearing aids with advanced Hearing Technology like Invisible Hearing Aids, Rechargeable and Bluetooth connectivity Hearing Aids, Hearing Aid Accessories which will suit your lifestyle and make it more stylish and comfortable.</p>
+              <h3>Hearing Aid Trial</h3>
+              <p>We have a wide range of Hearing aids with advanced Hearing Technology like Invisible Hearing Aids, Rechargeable and Bluetooth connectivity Hearing Aids, Hearing Aid Accessories which will suit your lifestyle and make it more stylish and comfortable. Avail our free hearing aid trial from anywhere in Bangalore and get 0% interest EMIs without any hassle.</p>
             </div>
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="box" data-aos="fade-up" data-aos-delay="600">
               <img src="assets/img/values-3.jpeg" loading="lazy" class="img-fluid" alt="">
-              <h2>Speech Therapy</h2>
+              <h3>Speech Therapy</h3>
               <p>Our Speech-Language Pathologists who provide complete care Assessment and treatment for various Speech and Language problems for both Adults and Children. Speech and language problems can be treated by a therapeutic approach which will have a therapy plan with pre-set goals on a timely basis. It includes behavioral interventions, Computer Based Instructions, Alternative and Augmentative Communication.</p>
             </div>
           </div>
@@ -275,7 +308,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h1>Make an Appointment</h1>
+          <h2>Make an Appointment</h2>
         </div>
 
         <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
@@ -289,7 +322,7 @@
               <div class="validate"></div>
             </div>
             <div class="col-md-4 form-group mt-3 mt-md-0">
-              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <input type="tel" class="form-control" name="phone" id="phone" pattern="[0-9]{10}" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 10 digits" minlength="10" maxlength="10" required>
               <div class="validate"></div>
             </div>
           </div>
@@ -349,7 +382,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h1>Hearing Aids</h1>
+          <h2>Hearing Aids</h2>
           <p>These are the types of Hearing Aids that are available. Get in touch with us for getting the one that suits you.</p>
         </div>
 
@@ -359,7 +392,7 @@
             <div class="member d-flex align-items-start">
               <div class="pic"><img src="assets/img/doctors/ha1.jpg" loading="lazy" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h3>Receiver-in-the-Canal (RIC)</h3>
+                <h4>Receiver-in-the-Canal (RIC)</h4>
                 <span>RIC hearing aid consists of a tiny housing containing all electronics except the receiver.</span>
                 <p>Powerful enough for treating mild to moderately severe hearing loss.</p>
                 
@@ -371,7 +404,7 @@
             <div class="member d-flex align-items-start">
               <div class="pic"><img src="assets/img/doctors/ha2.jpg" loading="lazy" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h3>Behind-the-Ear (BTE)</h3>
+                <h4>Behind-the-Ear (BTE)</h4>
                 <span>BTE is curved to match the contour of the ear and rests directly behind the ear.</span>
                 <p>Popular choice for children. </p>
                 
@@ -383,7 +416,7 @@
             <div class="member d-flex align-items-start">
               <div class="pic"><img src="assets/img/doctors/ha3.jpg" loading="lazy" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h3>Completely-in-the-Canal (CIC)</h3>
+                <h4>Completely-in-the-Canal (CIC)</h4>
                 <span> CIC hearing aid can fit deep inside the ear canal, making it almost invisible,smallest available</span>
                 <p>Good choice for mild to moderate hearing loss.</p>
                 
@@ -395,7 +428,7 @@
             <div class="member d-flex align-items-start">
               <div class="pic"><img src="assets/img/doctors/ha4.jpg" loading="lazy" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h3>In-the-Canal (ITC)</h3>
+                <h4>In-the-Canal (ITC)</h4>
                 <span>This style is also designed to fit in the ear canal, but not as deeply as a CIC device.</span>
                 <p>Best for patients with mild to moderate hearing loss.</p>
                 
@@ -407,7 +440,7 @@
             <div class="member d-flex align-items-start">
               <div class="pic"><img src="assets/img/doctors/ha5.jpg" loading="lazy" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h3>In-the-Ear (ITE)</h3>
+                <h4>In-the-Ear (ITE)</h4>
                 <span>This Hearing aid is designed to fill the outer portion of the ear,is larger than ITC,less discreet</span>
                 <p>Depending on the size of the ear canal an in the ear hearing aid may be relatively discreet.</p>
                 
@@ -419,7 +452,7 @@
             <div class="member d-flex align-items-start">
               <div class="pic"><img src="assets/img/doctors/ha6.png" loading="lazy" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h3>Invisible-In-Canal (IIC)</h3>
+                <h4>Invisible-In-Canal (IIC)</h4>
                 <span>The smallest hearing aid,uses the ear’s natural shape to localize sound & invisible.</span>
                 <p>Fully automatic, making the listening experience even more natural. </p>
                 
@@ -433,7 +466,7 @@
     <section id="hearingtest" class="section-bg">
 
       <div class="section-title">
-        <h1>Free Hearing Test</h1>
+        <h2>Free Hearing Test</h2>
         <p>Take our free hearing test and start your journey to better hearing!</p>
       </div>
 
@@ -580,7 +613,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h1>Frequently Asked Questions</h1>
+          <h2>Frequently Asked Questions</h2>
           <p>Here are a few frequently asked questions which will help you clear a few of yours doubts.</p>
         </div>
 
@@ -662,7 +695,7 @@
       <div class="container" data-aos="fade-up">
 
         <header class="section-title">
-          <h1>Our Team</h1>
+          <h2>Our Team</h2>
           
         </header>
 
@@ -675,7 +708,7 @@
                 
               </div>
               <div class="member-info">
-                <h3>Kalpana Joshi</h3>
+                <h4>Kalpana Joshi</h4>
                 <span>Founder - Senior Audiologist & Speech language pathologist</span>
                 <p>Kalpana Joshi had completed speech and hearing in 1993 from All India Institute of Speech and Hearing Mysore. She has an experience of more than 27 years in field of Audiology and Speech therapy. Worked as Audiologist in KIMS Karad(Maharashtra) , Lecturer at Karnataka Institute of Speech and Hearing- Bangalore & Audiologist in Sagar Hospital Jaynagar from 2005. She has been an integral part in developing our unique collaborative approach to the fitting of hearing instruments. She is highly dedicated to quality patient care and providing ongoing support and rehabilitation for those in her care.</p>
               </div>
@@ -691,7 +724,7 @@
                 </div>
               </div>
               <div class="member-info">
-                <h3>Mohamed Fazal VV</h3>
+                <h4>Mohamed Fazal VV</h4>
                 <span>Co Founder - Audiologist & Speech language pathologist</span>
                 <p>Mohamed Fazal is a licensed Audiologist and Speech Language Pathologist who carries a Registration from Rehabilitation Council of India. He has provided Speech Therapy and Hearing healthcare services in Bangalore since 2016. He is an expert Audiologist in assesing and planning management program for hearing disorders and have strong interpersonal communication skills. He has had clinical experiences providing prevention, treatment and assessment services for Speech Language disorders for pediatric population in schools, clinics, daycare and home settings.</p>
             </div>
@@ -709,7 +742,7 @@
     <section id="testimonials" class="testimonials section-bg">
       <div class="container">
         <header class="section-title">
-          <h1>Testimonials</h1>
+          <h2>Testimonials</h2>
           <p>Find out what our patients have to say</p>
         </header>
 
@@ -720,7 +753,7 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                  <h2>Amira Khan</h2>
+                  <h3>Amira Khan</h3>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                     Good ambience with polite and experienced staffs. One of the best place for speech and hearing evaluation and for the purchase of world class hearing aids.
@@ -734,7 +767,7 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                  <h2>Swati Krishna</h2>
+                  <h3>Swati Krishna</h3>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                     Good services by Dr Hear team. The staffs are always approachable. Affordable price for hearing aids and excellent services even at the comfort of our homes.                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
@@ -747,7 +780,7 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                  <h2>Raj Rana</h2>
+                  <h3>Raj Rana</h3>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                     Dr Hear staffs took the time to evaluate and explain the problems that I had in each ear. They also went into detail on how they would balance each ear so that would make each ear have a normal balance and volume. They created three different settings for three different environments. They also gave a trial period of 14 days, to [try them out], which really impressed me. That made the sale.                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
@@ -760,7 +793,7 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                  <h2>Mohammed Irfan</h2>
+                  <h3>Mohammed Irfan</h3>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                     I took my father here. The Audiologists were very polite and understood the problem of my 60 years old father patiently. They gave me a wide range of user friendly hearing aids with the best features. I also availed decent discounts. I will definitely recommend it to every one.
@@ -775,7 +808,7 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                  <h2>Sheethal Shah</h2>
+                  <h3>Sheethal Shah</h3>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                     Dr Hear staffs took the time to evaluate and explain the problems that I had in each ear. They also went into detail on how they would balance each ear so that would make each ear have a normal balance and volume. They created three different settings for three different environments. They also gave a trial period of 14 days, to [try them out], which really impressed me. That made me the deal.                    
@@ -799,7 +832,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h1>Contact</h1>
+          <h2>Contact</h2>
           <p>Get in touch with us.</p>
         </div>
       </div>
@@ -811,19 +844,19 @@
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
-                <h3>Location:</h3>
-                <p>Bangalore</p>
+                <h4>We offer our services at:</h4>
+                <p><a href="https://goo.gl/maps/7NdNdMSh8ENiDKxc8">Koramangala, HSR Layout, Jayanagar, JP Nagar, Banashankari, Vijayanagar, Marathahalli, Whitefield, Hebbal, Ashok Nagar, Sadhashiv Nagar, Electronic City, KR Puram, Indiranagar, Kalyan Nagar, Rajajinagar</a></p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
-                <h3>Email:</h3>
+                <h4>Email:</h4>
                 <p><a href="mailto:drhearclinics@gmail.com">drhearclinics@gmail.com</a></p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
-                <h3>Call:</h3>
+                <h4>Call:</h4>
                 <p><a href="tel:+919606212030">+91 9606212030</a></p>
               </div>
 
@@ -841,6 +874,10 @@
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                   <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                 </div>
+              </div>
+              <div class="form-group mt-3 mt-md-0">
+                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" pattern="[0-9]{10}"  data-msg="Please enter at least 10 digits" minlength="10" maxlength="10" required>
+                <div class="validate"></div>
               </div>
               <div class="form-group mt-3">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>

@@ -14,7 +14,7 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h5, h6 {
+h1,h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
@@ -549,6 +549,13 @@ h1, h2, h3, h5, h6 {
   font-weight: 700;
 }
 
+#hero h2 {
+  color: #000000;
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: 700;
+}
+
 #first{
   color: white !important;
 }
@@ -556,8 +563,11 @@ h1, h2, h3, h5, h6 {
 #hero h1 span {
   color: #1977cc;
 }
+#hero h2 span {
+  color: #1977cc;
+}
 
-#hero h2 {
+#hero h3 {
   width: 80%;
   -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s;
@@ -661,6 +671,12 @@ h1, h2, h3, h5, h6 {
   }
 }
 
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 28px;
+  }
+}
+
 @media (min-width: 1024px) {
   #hero .carousel-control-prev, #hero .carousel-control-next {
     width: 5%;
@@ -703,6 +719,16 @@ section {
   color: #2c4964;
 }
 
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #2c4964;
+}
+
 .section-title h1::before {
   content: '';
   position: absolute;
@@ -714,7 +740,30 @@ section {
   left: calc(50% - 60px);
 }
 
+.section-title h2::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
 .section-title h1::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #1977cc;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+
+.section-title h2::after {
   content: '';
   position: absolute;
   display: block;
@@ -751,8 +800,21 @@ section {
   margin: 0;
 }
 
+.breadcrumbs h2 {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+}
+
 @media (max-width: 992px) {
   .breadcrumbs h1 {
+    margin: 0 0 10px 0;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .breadcrumbs h2 {
     margin: 0 0 10px 0;
   }
 }
@@ -815,13 +877,13 @@ section {
   line-height: 0;
 }
 
-.featured .icon-box h2 {
+.featured .icon-box h3 {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 20px;
 }
 
-.featured .icon-box h2 a {
+.featured .icon-box h3 a {
   color: #545454;
   transition: 0.3s;
 }
@@ -837,7 +899,7 @@ section {
   background: #1977cc;
 }
 
-.featured .icon-box:hover i, .featured .icon-box:hover h2 a, .featured .icon-box:hover p {
+.featured .icon-box:hover i, .featured .icon-box:hover h3 a, .featured .icon-box:hover p {
   color: #fff;
 }
 
@@ -848,13 +910,13 @@ section {
 .about {
   background-color: #F1F7FD;
 }
-.about .icon-boxes h3 {
+.about .icon-boxes h4 {
   font-size: 18px;
   color: #4b7dab;
   margin-bottom: 15px;
 }
 
-.about .icon-boxes h2 {
+.about .icon-boxes h3 {
   font-size: 28px;
   font-weight: 700;
   color: #2c4964;
@@ -1032,7 +1094,7 @@ section {
   transform: scale(1.1);
 }
 
-.services .box h2 {
+.services .box h3 {
   font-size: 24px;
   color: #012970;
   font-weight: 700;
@@ -1175,7 +1237,7 @@ section {
   padding-left: 30px;
 }
 
-.doctors .member h3 {
+.doctors .member h4 {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 20px;
@@ -1404,7 +1466,7 @@ section {
   padding: 10px 15px 20px 15px;
 }
 
-.team .member .member-info h3 {
+.team .member .member-info h4 {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 20px;
@@ -1462,14 +1524,14 @@ section {
   left: -45px;
 }
 
-.testimonials .testimonial-item h2 {
+.testimonials .testimonial-item h3 {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 0;
   color: #111;
 }
 
-.testimonials .testimonial-item h3 {
+.testimonials .testimonial-item h4 {
   font-size: 14px;
   color: #999;
   margin: 0;
@@ -1568,7 +1630,7 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.contact .info h3 {
+.contact .info h4 {
   padding: 0 0 0 60px;
   font-size: 22px;
   font-weight: 600;
@@ -1707,7 +1769,7 @@ section {
   margin-bottom: 30px;
 }
 
-#footer .footer-top .footer-contact h3 {
+#footer .footer-top .footer-contact h4 {
   font-size: 22px;
   margin: 0 0 30px 0;
   padding: 2px 0 2px 0;
@@ -1723,7 +1785,7 @@ section {
   color: #777777;
 }
 
-#footer .footer-top h3 {
+#footer .footer-top h4 {
   font-size: 16px;
   font-weight: bold;
   color: #444444;
@@ -1774,7 +1836,7 @@ section {
   font-size: 15px;
 }
 
-#footer .footer-newsletter h3 {
+#footer .footer-newsletter h4 {
   font-size: 16px;
   font-weight: bold;
   color: #444444;

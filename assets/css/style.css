@@ -1522,6 +1522,8 @@ section {
   border: 6px solid #fff;
   position: absolute;
   left: -45px;
+  width: auto;
+  height: auto;
 }
 
 .testimonials .testimonial-item h3 {
